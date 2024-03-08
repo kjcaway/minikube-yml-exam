@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-ingress
+  annotations:
+    # when use aws load balancer
+    alb.ingress.kubernetes.io/healthcheck-protocol: HTTP
+    alb.ingress.kubernetes.io/healthcheck-port: 8080
+    alb.ingress.kubernetes.io/healthcheck-path: /actuator/health
+    alb.ingress.kubernetes.io/certificate-arn: "arn"
+    alb.ingress.kubernetes.io/group.name: "alb-name"
+    alb.ingress.kubernetes.io/security-groups: "sg-name"
+    alb.ingress.kubernetes.io/actions.alb: >
+      {"type":"forward","forwardConfig":{"targetGroups":[{"serviceName":"my-nginx","servicePort":"80"}]}}
+    alb.ingress.kubernetes.io/conditions.alb: >
+      [{"field":"http-header","httpHeaderConfig":{"httpHeaderName":"x-customer-header","values":["my-nginx-access-key"]}}]
+spec:
+  rules:
+    - host: hello.test.com
+      http:
+        paths:
+          - backend:
+              service:
+                name: alb
+                port:
+                  name: use-annotation
+            path: /
+            pathType: Prefix
