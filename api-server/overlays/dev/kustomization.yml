@@ -1,4 +1,4 @@
-bases:
+resources:
 - ../../base
 
 namespace: dev-coffeeshop
@@ -8,7 +8,7 @@ namePrefix: dev-
 commonLabels:
   env: dev
 
-patchesStrategicMerge:
+patches:
 - patchDeployment.yml
 - patchIngress.yml
 - patchService.yml
