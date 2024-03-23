@@ -9,6 +9,6 @@ commonLabels:
   env: dev
 
 patches:
-- patchDeployment.yml
-- patchIngress.yml
-- patchService.yml
+- path: patchDeployment.yml
+- path: patchIngress.yml
+- path: patchService.yml
