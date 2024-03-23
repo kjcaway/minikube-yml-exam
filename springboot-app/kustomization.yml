@@ -1,0 +1,4 @@
+resources:
+- deployment.yml
+- ingress-nginx.yml
+- svc.yml
