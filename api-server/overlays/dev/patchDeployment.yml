@@ -16,4 +16,4 @@ spec:
           env:
           - name: SPRING_PROFILES_ACTIVE
             value: dev
-      restartPolicy: OnFailure
+  restartPolicy: OnFailure
