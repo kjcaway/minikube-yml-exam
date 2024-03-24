@@ -12,19 +12,19 @@ spec:
         - name: api-server
           image: api-exam:0.0.2
           ports:
-            - containerPort: 8080
+            - containerPort: 8081
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: dev
-          # livenessProbe:
-          #   tcpSocket:
-          #     port: 8080
-          #   initialDelaySeconds: 30
-          #   periodSeconds: 30
-          # readinessProbe:
-          #   httpGet:
-          #     path: /actuator/health
-          #     port: 8080
-          #   initialDelaySeconds: 60
-          #   periodSeconds: 30
+          livenessProbe:
+            tcpSocket:
+              port: 8081
+            initialDelaySeconds: 30
+            periodSeconds: 30
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8081
+            initialDelaySeconds: 60
+            periodSeconds: 30
   restartPolicy: OnFailure
