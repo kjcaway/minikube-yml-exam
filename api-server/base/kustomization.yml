@@ -2,6 +2,7 @@ resources:
 - deployment.yml
 - ingress.yml
 - service.yml
+- hpa.yml
 
 commonLabels:
   app: api-server
