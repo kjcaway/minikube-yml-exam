@@ -10,6 +10,9 @@ spec:
     spec:
       containers:
         - name: api-server
-          image: springboot-exam:0.0.1
+          image: api-exam:0.0.2
           ports:
             - containerPort: 8080
+          env:
+          - name: SPRING_PROFILES_ACTIVE
+            value: dev
