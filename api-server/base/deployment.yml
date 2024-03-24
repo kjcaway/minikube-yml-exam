@@ -9,5 +9,5 @@ spec:
       name: api-server
     spec:
       containers:
-        - name: nginx
-          image: nginx
+        - name: api-server
+          image: api-exam:0.0.2
