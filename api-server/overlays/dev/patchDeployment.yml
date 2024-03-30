@@ -33,4 +33,4 @@ spec:
               port: 8081
             initialDelaySeconds: 60
             periodSeconds: 30
-  restartPolicy: OnFailure
+      restartPolicy: OnFailure
