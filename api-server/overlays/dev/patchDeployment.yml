@@ -16,6 +16,11 @@ spec:
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: dev
+          resources:
+            limits:
+              cpu: 500m
+            requests:
+              cpu: 500m
           livenessProbe:
             tcpSocket:
               port: 8081
