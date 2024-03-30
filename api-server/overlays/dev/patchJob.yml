@@ -4,6 +4,7 @@ metadata:
   name: hello
 spec:
   schedule: "* * * * *"
+  successfulJobsHistoryLimit: 10
   jobTemplate:
     spec:
       template:
