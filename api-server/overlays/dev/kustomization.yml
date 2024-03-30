@@ -13,3 +13,4 @@ patches:
 - path: patchIngress.yml
 - path: patchService.yml
 - path: patchHpa.yml
+- path: patchJob.yml
