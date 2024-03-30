@@ -11,3 +11,8 @@ spec:
       containers:
         - name: api-server
           image: api-exam:0.0.2
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 500m
