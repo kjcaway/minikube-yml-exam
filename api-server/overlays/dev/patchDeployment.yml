@@ -19,8 +19,10 @@ spec:
           resources:
             limits:
               cpu: 500m
+              memory: 200M
             requests:
               cpu: 500m
+              memory: 200M
           livenessProbe:
             tcpSocket:
               port: 8081
