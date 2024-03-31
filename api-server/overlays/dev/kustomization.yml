@@ -10,7 +10,7 @@ commonLabels:
 
 patches:
 - path: patchDeployment.yml
-- path: patchIngress.yml
+# - path: patchIngress.yml
 - path: patchService.yml
 - path: patchHpa.yml
 - path: patchJob.yml
