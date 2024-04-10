@@ -5,3 +5,10 @@ metadata:
 data:
   DATASOURCE_USERNAME: "root"
   DATASOURCE_PASSWORD: "1234"
+  test.json: |
+    {
+      "limit": 1,
+      "envs": [
+        "dev","stage","prod"
+      ]
+    }
