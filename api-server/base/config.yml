@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: api-server-config
 data:
-  DATASOURCE_PASSWORD: 1234
+  DATASOURCE_PASSWORD: "1234"
