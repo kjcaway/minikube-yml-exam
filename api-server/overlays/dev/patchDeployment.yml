@@ -15,6 +15,9 @@ spec:
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: dev
+          volumeMounts:
+            - name: config-vol
+              mountPath: /etc/config
           resources:
             limits:
               cpu: 500m
@@ -35,6 +38,6 @@ spec:
             periodSeconds: 30
       restartPolicy: Always
       volumes:
-        - name: config
+        - name: config-vol
           configMap:
             name: api-server-config
