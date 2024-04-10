@@ -15,6 +15,9 @@ spec:
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: dev
+          envFrom:
+            - configMapRef:
+                name: api-server-config
           volumeMounts:
             - name: config-vol
               mountPath: /etc/config
