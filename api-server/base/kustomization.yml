@@ -4,6 +4,7 @@ resources:
 - service.yml
 - hpa.yml
 - job.yml
+- config.yml
 
 commonLabels:
   app: api-server

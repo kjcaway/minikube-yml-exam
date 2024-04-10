@@ -14,3 +14,4 @@ patches:
 - path: patchService.yml
 - path: patchHpa.yml
 - path: patchJob.yml
+- path: patchConfig.yml

@@ -34,3 +34,7 @@ spec:
             initialDelaySeconds: 60
             periodSeconds: 30
       restartPolicy: Always
+      volumes:
+        - name: config
+          configMap:
+            name: api-server-config
